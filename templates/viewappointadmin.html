@@ -1,0 +1,54 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+    <!-- Navbar End -->
+
+<br><br><br><br><br><br>
+    <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            
+        
+         
+            <div class="row justify-content-center position-relative" style="margin-top: -200px; z-index: 1;">
+                <div class="col-lg-12">
+                    <div class="bg-white rounded p-5 m-5 mb-0">
+
+
+                        <!-- <form method="GET" action="" style="margin-bottom: 20px;">
+                            <input type="text" name="q" placeholder="Search by place..." value="{{ request.GET.q }}">
+                            <button type="submit">Search</button>
+                        </form> -->
+
+
+
+                        <div class="row">
+                            {% for i in x %}
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ i.name }}</h5>
+                                        <p class="card-text"><strong>clinic_name:</strong> {{ i.clinic_name }}</p>
+                                        <p class="card-text"><strong>Date:</strong> {{ i.date }}</p>
+                                        <p class="card-text"><strong>Medical History:</strong> <a href="{{ i.specialization }}" download="">Download</a></p>
+                                        <p class="card-text"><strong>Clinic_Name:</strong> {{ i.clinic_name }}</p>
+                                        <p class="card-text"><strong>Description:</strong> {{ i.description }}</p>
+                                        <p class="card-text"><strong>Time:</strong> {{ i.timing }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    {% include 'footer.html' %}
+    {% endblock %}

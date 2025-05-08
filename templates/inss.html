@@ -1,0 +1,72 @@
+{% load static %}
+{% block content %}
+{% include "header.html" %}
+
+<!-- about section start -->
+<div class="about_section_2 layout_padding">
+    <div class="container">
+        <h1 class="about_text_2"><strong>FAQ</strong></h1>
+        <p class="client_long_text">Here are some questions you can use to assess stress levels in students:</p>
+    </div>
+</div>
+
+<div class="container">
+    <h3>Q1, General Feelings:</h3>
+    <ul>
+        <li>1. How often do you feel overwhelmed by your schoolwork? (Always, Often, Sometimes, Rarely, Never)</li>
+        <li>2. On a scale of 1 (not at all stressed) to 5 (extremely stressed), how stressed do you feel right now?</li>
+        <li>3. In the past week, how often have you felt anxious or irritable? (Always, Often, Sometimes, Rarely, Never)</li>
+    </ul>
+
+    <h3>Q2, Sleep and Physical Symptoms:</h3>
+    <ul>
+        <li>1. How many hours of sleep do you typically get per night?</li>
+        <li>2. Have you noticed any changes in your appetite or eating habits recently? (Increased, Decreased, No Change)</li>
+        <li>3. Are you experiencing any physical symptoms like headaches, stomachaches, or muscle tension? (Select all that apply)</li>
+    </ul>
+
+    <h3>Q3, Thoughts and Behaviors:</h3>
+    <ul>
+        <li>1. Do you find it difficult to concentrate on your schoolwork? (Always, Often, Sometimes, Rarely, Never)</li>
+        <li>2. Have you been feeling more negative or hopeless lately? (Always, Often, Sometimes, Rarely, Never)</li>
+        <li>3. How often do you procrastinate on schoolwork? (Always, Often, Sometimes, Rarely, Never)</li>
+        <li>4. Do you find yourself withdrawing from social activities or hobbies you used to enjoy? (Always, Often, Sometimes, Rarely, Never)</li>
+    </ul>
+
+    <h3>Q4, Academic Pressure:</h3>
+    <ul>
+        <li>1. How much pressure do you feel to succeed academically? (A lot, Some, A little, Not much)</li>
+        <li>2. Do you feel like you have to meet high expectations from your parents/teachers/yourself? (Always, Often, Sometimes, Rarely, Never)</li>
+        <li>3. How often do you procrastinate on schoolwork? (Always, Often, Sometimes, Rarely, Never)</li>
+        <li>4. How confident do you feel in your ability to manage your workload? (Very confident, Somewhat confident, Not very confident, Not confident at all)</li>
+    </ul>
+</div>
+
+<!-- about section end -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+
+    $(".zoom").hover(function(){
+        $(this).addClass('transition');
+    }, function(){
+        $(this).removeClass('transition');
+    });
+});
+
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+{% include "footer.html" %}
+{% endblock %}

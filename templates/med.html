@@ -1,0 +1,43 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+    <!-- Navbar End -->
+
+<br><br><br><br><br><br>
+    <!-- Contact Start -->
+
+            <div class="row justify-content-center position-relative" style="margin-top: -200px; z-index: 1;">
+                <div class="col-lg-8">
+                    <div class="bg-white rounded p-5 m-5 mb-0">
+                        <h1>Add Medicine</h1>
+                        <form method="POST" action="addmed">
+                            {% csrf_token %}
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Your medicine name" name="med_name" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Your timingss" name="timingss" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Your notes" name="notes" style="height: 55px;">
+                                </div>
+                              
+                              
+                              
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Add </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    {% include 'footer.html' %}
+    {% endblock %}

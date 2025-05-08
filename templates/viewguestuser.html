@@ -1,0 +1,39 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+    <!-- Navbar End -->
+
+    <br><br><br><br><br><br>
+
+    <!-- Contact Start -->
+   
+            <div class="row justify-content-center position-relative" style="margin-top: -200px; z-index: 1;">
+                <div class="col-lg-8">
+                    <div class="bg-white rounded p-5 m-5 mb-0">
+          <table class="table table-striped">
+            <tr>
+            <th>UserName</th>
+            <th>E-mail</th>
+            <th>Password</th>
+            </tr>
+
+            {% for i in x %}
+            <tr>
+                <td>{{i.uname}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.password}}</td>
+            </tr>
+
+            {% endfor %}
+          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    {% include 'footer.html' %}
+    {% endblock %}

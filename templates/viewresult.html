@@ -1,0 +1,46 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+    <!-- Navbar End -->
+    <br><br><br><br><br><br>
+
+
+    <!-- Contact Start -->
+   
+            <div class="row justify-content-center position-relative" style="margin-top: -200px; z-index: 1;">
+                <div class="col-lg-8">
+                    <div class="bg-white rounded p-5 m-5 mb-0">
+
+
+                        
+     
+          <table class="table table-striped">
+            <tr>
+            <th>User ID</th>
+            <th>Emotion</th>
+            <th>Result</th>
+            <th>Date</th>
+            </tr>
+
+            {% for i in result %}
+            <tr>
+                <td>{{i.uid}}</td>
+                <td>{{i.emotion}}</td>
+                <td>{{i.result}}</td>
+                <td>{{i.date_time}}</td>
+               
+            </tr>
+
+            {% endfor %}
+          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    {% include 'footer.html' %}
+    {% endblock %}

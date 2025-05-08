@@ -1,0 +1,148 @@
+{% load static %}
+{% block content %}
+{% include "header.html" %}
+
+<br><br><br><br><br><br>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 10px;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<!-- Contact Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Depression  Detection</h1>
+        </div>
+        <div class="row g-4">
+           
+           <center>
+            <div class="col-md-12">
+                <div class="wow fadeInUp" data-wow-delay="0.6s">
+                    <form action="data_submit" method="POST" >
+                        {% csrf_token %}
+                    <table border='1'>
+                    <tr>
+                        <th>S.NO</th>
+                        <th >Please tick one option per question only</th>
+                        <th>Yes</th>
+                        <th>No </th>
+                       
+                    </tr>
+                    
+                        <tr><td>1</td>
+                        <td style="width: 70%;"> Do you often feel overwhelmed by your schoolwork?     </td>
+                        <td> <input class="form-check-input"  name='a' type='radio' value='1'></td>
+                        <td> <input class="form-check-input"  name='a' type='radio' value='0'></td>
+                       
+                        </tr>
+                        
+                        
+                        <tr><td>2</td>
+                        <td>Have you struggled to meet deadlines recently?</td>
+                        <td > <input class="form-check-input"  name='b' type='radio' value='1'></td>
+                        <td> <input class="form-check-input" name='b' type='radio' value='0'></td>
+                       
+                        </tr>
+                        
+                        
+                        <tr><td>3</td>
+                        <td>Do you find it difficult to focus on your studies for extended periods?</td>
+                        <td> <input class="form-check-input" name='c' type='radio' value='1'></td>
+                        <td> <input class="form-check-input" name='c' type='radio' value='0'></td>
+                      
+                        </tr>
+                        
+                        
+                        <tr><td>4</td>
+                        <td> Do you constantly worry about failing exams or getting bad grades? </td>
+                        <td> <input class="form-check-input" name='d' type='radio' value='1'></td>
+                        <td> <input class="form-check-input" name='d' type='radio' value='0'></td>
+                     
+                        </tr>
+                        
+                        
+                        <tr><td>5</td>
+                        <td> Have you felt like you're not putting in enough effort to succeed academically?</td>
+                        <td> <input class="form-check-input" name='e' type='radio' value='1'></td>
+                        <td> <input class="form-check-input" name='e' type='radio' value='0'></td>
+                       
+                        </tr>
+                        
+                        
+                        <tr><td>6</td>
+                        <td> Have you been feeling easily frustrated or angry lately? </td>
+                        <td> <input class="form-check-input" name='f' type='radio' value='1'></td>
+                        <td> <input class="form-check-input" name='f' type='radio' value='0'></td>
+                
+                        </tr>
+                        
+                        
+                        
+                        <tr><td>7</td>
+                        <td> Do you often feel down or in a low mood? </td>
+                        <td> <input class="form-check-input" name='g' type='radio' value='1'></td>
+                        <td> <input class="form-check-input" name='g' type='radio' value='0'></td>
+                       
+                        </tr>
+                        
+                        
+                        
+                        <tr><td>8</td>
+                        <td> Have you recently experienced changes in your sleep patterns?</td>
+                        <td> <input class="form-check-input" name='h' type='radio' value='1'></td>
+                        <td> <input class="form-check-input" name='h' type='radio' value='0'></td>
+                        
+                    
+                        </tr>
+                        
+                        
+                        
+                        <tr><td>9</td>
+                        <td> Do you find it difficult to relax and unwind at the end of the day?</td>
+                        <td> <input class="form-check-input" name='i' type='radio' value='1'></td>
+                        <td> <input class="form-check-input" name='i' type='radio' value='0'></td>
+                        
+                        </tr>
+                        
+                        
+                        
+                        
+                        <tr><td>10</td>
+                        <td> Have you lost interest in hobbies or activities you used to enjoy? </td>
+                        <td> <input class="form-check-input" name='j' type='radio' value='1'></td>
+                        <td> <input class="form-check-input" name='j' type='radio' value='0'></td>
+                        
+                        </tr>
+                  
+                      
+                        <tr>
+                            <td><input class="btn btn-primary" type="submit"></td>
+                        </tr>
+                        
+                        </table>
+                    </form>
+                </div>
+                <div class="container">
+                    <!-- Your existing HTML code -->
+                    <h2 style="font-size: 30px;">Result : {{ stress_level }}</h2>
+                </div>
+            </div>
+        </center>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+{% include "footer.html" %}
+{% endblock %}
+   
