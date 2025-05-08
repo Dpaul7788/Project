@@ -1,0 +1,1 @@
+This Project is Depresiion Detection System Using Artifical Intelligence.The Main Purpose is to find the depression by capturing facial emotions.The Project is done with python,ML and using MYSQL.This Project also contains other modules like Doctor management,patient managements and many other.
